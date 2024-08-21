@@ -2,7 +2,6 @@ import { sha256 } from "./sha256";
 
 // build a Merkle Tree and return the Merkle Root hash
 export function buildMerkleTree(leaves: string[]): string {
-  console.log('Leaves: ', leaves)
   if (leaves.length === 1) {
     return leaves[0];  // Merkle Root
   }
@@ -20,7 +19,6 @@ export function buildMerkleTree(leaves: string[]): string {
       newLevel.push(leaves[i]);
     }
   }
-  console.log('----------- Next Level ---------------')
   // Recursively build the tree until we get the root
   return buildMerkleTree(newLevel);
 }
