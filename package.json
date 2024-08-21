@@ -1,0 +1,23 @@
+{
+  "name": "blockchain-js-implementation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "merkleTree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imsebarz/blockchain-js-implementation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imsebarz/blockchain-js-implementation/issues"
+  },
+  "homepage": "https://github.com/imsebarz/blockchain-js-implementation#readme",
+  "devDependencies": {
+    "@types/node": "^22.4.1"
+  }
+}
