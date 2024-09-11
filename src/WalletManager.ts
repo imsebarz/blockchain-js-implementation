@@ -37,7 +37,7 @@ class WalletManager {
   
     // Print all balances (for debugging purposes)
     printBalances(): void {
-      console.log("Wallet balances:", this.balances);
+      console.log("Wallet balances: ", this.balances);
     }
   }
   

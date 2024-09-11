@@ -44,7 +44,7 @@ class Block {
     while (this.calculateHash().substring(0, this.difficulty) !== target) {
       this.nonce++;
     }
-    console.log(`Block mined with nonce: ${this.nonce}, hash: ${this.calculateHash()}`);
+    console.log(`Block mined with nonce : ${this.nonce}, hash: ${this.calculateHash()}`);
   }
 
   // Verifying all transactions before mining the block

@@ -119,7 +119,7 @@ const difficulty = 4; // Number of leading zeros
 
 ## Transaction Verification
 
-Each transaction is verified to ensure that the sender has sufficient balance before it is added to a block. If the transaction is invalid (i.e., the sender does not have enough funds), the transaction is rejected, and the block will not be mined.
+Each transaction it is verified to ensure that the sender has sufficient balance before it is added to a block. If the transaction is invalid (i.e., the sender does not have enough funds), the transaction is rejected, and the block will not be mined.
 
 ### Wallet Balances
 

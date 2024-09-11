@@ -47,7 +47,7 @@ const blocks = Block.createBlocks(transactions, difficulty, walletManager);
 // Display the wallet balances and blocks
 walletManager.printBalances();
 blocks.forEach((block, index) => {
-  console.log('-----------------------------');
+  console.log('----------------------------');
   console.log(`Block ${index + 1}:`);
   console.log(`Prev Hash: ${block.prevHash}`);
   console.log(`Merkle Root: ${block.rootHash}`);
@@ -56,5 +56,5 @@ blocks.forEach((block, index) => {
   console.log(`Block Hash: ${block.calculateHash()}`);
   console.log('Transactions:');
   console.table(block.transactions); // Print in tabular format
-  console.log('-----------------------------');
+  console.log('----------------------------');
 });
