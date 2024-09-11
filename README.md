@@ -135,5 +135,3 @@ walletManager.setBalance("Bob", 50);    // Bob starts with 50 units
 This project is licensed under the MIT License.
 
 ---
-
-This simplified `README.md` assumes you are only using `tsc` and `node` to build and start the project without any complex setup or dependencies.
