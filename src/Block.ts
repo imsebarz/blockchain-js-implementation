@@ -65,6 +65,7 @@ class Block {
 
     for (let i = 0; i < transactions.length; i += maxTransactionsPerBlock) {
       const transactionSlice = transactions.slice(i, i + maxTransactionsPerBlock);
+      walletManager.printBalances()
       const block = new Block(prevHash, transactionSlice, difficulty, walletManager);
 
       // Verify transactions before mining the block

@@ -5,11 +5,11 @@ import { WalletManager } from "./WalletManager";
 
 // Initialize WalletManager and set initial balances
 const walletManager = new WalletManager();
-walletManager.initializeBalance("Alice");
-walletManager.initializeBalance("Bob");
-walletManager.initializeBalance("Charlie");
-walletManager.initializeBalance("Dave");
-walletManager.initializeBalance("Eve");
+walletManager.initializeWallet("Alice");
+walletManager.initializeWallet("Bob");
+walletManager.initializeWallet("Charlie");
+walletManager.initializeWallet("Dave");
+walletManager.initializeWallet("Eve");
 
 // Set initial balances for Alice and Bob using setBalance
 walletManager.setBalance("Alice", 100); // Alice starts with 100 units
@@ -45,14 +45,16 @@ const difficulty = 4;
 const blocks = Block.createBlocks(transactions, difficulty, walletManager);
 
 // Display the wallet balances and blocks
-console.log(transactions)
 walletManager.printBalances();
 blocks.forEach((block, index) => {
+  console.log('-----------------------------');
   console.log(`Block ${index + 1}:`);
   console.log(`Prev Hash: ${block.prevHash}`);
   console.log(`Merkle Root: ${block.rootHash}`);
   console.log(`Nonce: ${block.nonce}`);
   console.log(`Timestamp: ${block.timestamp}`);
   console.log(`Block Hash: ${block.calculateHash()}`);
+  console.log('Transactions:');
+  console.table(block.transactions); // Print in tabular format
   console.log('-----------------------------');
 });

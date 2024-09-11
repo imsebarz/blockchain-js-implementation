@@ -6,7 +6,7 @@ class WalletManager {
     constructor() {}
   
     // Initialize the balance of a wallet if not present
-    initializeBalance(address: string): void {
+    initializeWallet(address: string): void {
       if (!this.balances[address]) {
         this.balances[address] = 0;
       }
@@ -25,7 +25,7 @@ class WalletManager {
     // Update the balance after a valid transaction
     updateBalances(sender: string, receiver: string, amount: number): void {
       this.balances[sender] -= amount;
-      this.initializeBalance(receiver);
+      this.initializeWallet(receiver);
       this.balances[receiver] += amount;
     }
   
